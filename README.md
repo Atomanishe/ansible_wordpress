@@ -16,4 +16,8 @@
 - Сканируем и сохраняем отпечатки удаленных ssh машин и сохраняем
 - ssh-keyscan 192.168.107.98 >> ~/.ssh/known_hosts
 - ssh-keyscan 192.168.107.98 >> ~/.ssh/known_hosts
-- nano deploy-ssh.yml (создаем playbook установке ключей на хостах)
+- [nano deploy-ssh.yml](https://github.com/Atomanishe/ansible_wordpress/blob/main/deploy-ssh.yml) (создаем playbook по установке ключей на хостах)
+- ansible-playbook deploy-ssh.yml --ask-pass (запускаем playbook и вводим пароль)
+- ansible webserver -m ping (проверяем соединение)
+- создаем основной [playbook](https://github.com/Atomanishe/ansible_wordpress/blob/main/playbook.yml)
+- ansible-playbook playbook.yml (запускаем) 
